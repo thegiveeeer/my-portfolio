@@ -1,0 +1,353 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: cadetblue;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5em;
+}
+
+h1{
+    font-weight: 400;
+}
+
+h2{
+    font-weight: 600;
+}
+
+b{
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.image{
+    padding: 10px;
+}
+
+button, button:focus{
+    border: none;
+    outline: none;
+    padding: 0.5em;
+}
+
+#social{
+    font-size: 1.5em;
+    position: absolute;
+    top: 5px;
+    left: 5%;
+}
+
+.container{
+    margin: 20px 5%;
+}
+
+
+.nav-btn{
+    width: 100%;
+    position: relative;
+    height: 2.1em;
+}
+.nav-btn span{
+    position: absolute;
+    right: 0;
+    font-size: 2em;
+}
+.nav-wrapper{
+    position: relative;
+    background-color: white;
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.1s linear;
+}
+.show-nav{
+    height: 11em;
+}
+.nav-wrapper ul{
+    list-style: none;
+    padding: 1em;
+}
+.nav-wrapper a, .nav-wrapper a:visited, .nav-wrapper a:focus{
+    color: #000;
+    text-decoration: none;
+}
+
+#page-title{
+    margin: 1em 0;
+    padding-bottom: 5px;
+    text-align: center;
+    font-weight: 400;
+    color: #fff;
+}
+
+.inner-container{
+    background-color: #fff;
+}
+.inner-container > *{
+    padding: 5%;
+}
+
+.breif-intro{
+    padding: 0;
+    background-image: url('images/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0,0.5);
+    color: #fff;
+}
+.breif-intro div{
+    padding: 5%;
+    background-color: rgba(0, 0, 0,0.5);
+}
+.read-more{
+    margin-top: 1em;
+    font-size: 1em;
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    width: fit-content;
+}
+
+.download-cv{
+    background-color: #33cc33;
+    color: #fff;
+}
+.hire-me{
+    background-color: #3333cc;
+    color: #fff;
+}
+
+
+#services{
+    background-color: rgba(221, 223, 255,0.5);
+}
+#services .item {
+    padding: 5%;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0.5px 0.5px 10px #000;
+    margin: 20px ;
+    text-align: center;
+}
+#services .item div{
+    font-size: 2em;
+}
+
+#my-skills .item{
+    margin: 1em 0;
+}
+.meter-responsive{
+    text-transform: uppercase;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #33cc33;
+}
+.meter-web-design{
+    text-transform: uppercase;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #ff3d3d;
+}
+.meter-backend{
+    text-transform: uppercase;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #3333cc;
+}
+
+.archivement{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.archivement .item{
+    text-align: center;
+    padding: 10px;
+}
+.archivement .item i{
+    font-size: 2em;
+    color: rgb(50,50,255);
+}
+
+#projects .item{
+    position: relative;
+}
+#projects .item img{
+    width: 100%;
+}
+#projects .item p{
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 1.1em;
+    background-color: rgba(221, 223, 255,0.5);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 5px;
+}
+
+.leave-a-message{
+    padding: 10px 0;
+    color: #3232ff;
+}
+.leave-a-message form{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 5%;
+}
+.leave-a-message form div{
+    width: 100%;
+}
+.leave-a-message label{
+    margin-top: 5px;
+    display: block;
+}
+.leave-a-message input, .leave-a-message input:focus,.leave-a-message textarea{
+    width: 100%;
+    padding: 0.5em;
+    outline: none;
+    border: none;
+    background-color: rgba(50, 50, 255,0.8);
+    color: #fff;
+    font-size: 1em;
+}
+.leave-a-message textarea{
+    resize: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.leave-a-message form button{
+    margin-top: 5px;
+    color: rgb(50,50,255);
+    position: relative;
+    overflow: hidden;
+    width: 6em;
+    background-color: rgba(225, 255, 255,0.9);
+}
+::placeholder{
+    color: rgba(225, 255, 255,0.5);
+}
+@keyframes fly{
+    from{top:40%;
+    left:65%;}
+    to{top:-50%;
+    left:95%;}
+}
+.fly{
+    position: absolute;
+    animation: fly 1.5s linear infinite;
+}
+
+#contact{
+    color: #fff;
+    position: relative;
+}
+
+.social{
+    font-size: 1.5em;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+.social a,#social a{
+    margin: 2.5px;
+}
+
+footer{
+    position: relative;
+    color: rgba(225, 255, 255,0.5);
+    margin: 5px;
+    padding: 5px;
+    border-top: 1px solid rgba(225, 255, 255,0.5);
+    text-align: center;
+
+}
+@keyframes go-up{
+    0%{top: -10px;}
+    50%{top: -15px;}
+    100%{top: -15px;}
+}
+.go-up{
+    position: absolute;
+    right: 10px;
+    top: -10px;
+    color: rgba(0, 0, 0,0.5);
+    font-size: 2em;
+    border-radius: 50%;
+    animation: go-up 1.5s  linear infinite;
+}
+
+@media screen and (min-width:600px){
+
+    #about-me{
+        position: relative;
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+    #about-me .dp{
+        width: 35%;
+    }
+    #about-me p{
+        width: 60%;
+    }
+    #about-me h1{
+        flex: 0 0 100%;
+    }
+
+    .leave-a-message form div{
+        width: 40%;
+        padding: 0 10px;
+    }
+
+    .leave-a-message .msg{
+        width: 80%;
+    }
+    .leave-a-message form .btn{
+        width: 80%;
+    }
+
+}
+
+@media screen and (min-width:900px){
+    .container{
+        margin: 20px 10%;
+    }
+
+    #services{
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+    #services h1{
+        flex: 0 0 100%;
+    }
+    #services .item {
+        margin: 20px 1.5%;
+        display: inline-block;
+        width: 30%;
+    }
+
+    #projects{
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+    #projects .text{
+        flex: 0 0 100%;
+    }
+    #projects .item{
+        display: inline-block;
+        margin:0 1% ;
+        width: 48%;
+    }
+}

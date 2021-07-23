@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset= "utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link type="text/css" rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="shortcut icon" href="favicon.png">
+    
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://kit.fontawesome.com/e06ce451e3.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+
+    <title> David Ugochukwu </title>
+</head>
+<body>
+
+    <div id="social">
+        <a href="mailto:dugochukwu45@gmail.com?" class="item">
+            
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a v-for="(link,key) of socials" :href="link" class="item">
+            
+            <i :class="'fab'+' '+'fa-'+key"></i>
+        </a>    
+    </div>
+
+    <div class="container" >
+        <span id="up"></span>
+        <nav id="nav">
+            
+           <div @click='toggleNav()' class="nav-btn">
+            <span type="button" class="fas fa-bars"></span>
+           </div>
+
+           <div :class='hide' class="nav-wrapper ">
+               <ul>
+                   <li v-for = "(key,link,index) of navItems">
+                       <a data-aos="fade-down" data-aos-delay="2000" :href="link">{{key}}</a></li>
+                    </ul>
+                </div>
+            </nav>
+                    
+        <div id="page-title">
+            <h1>DAVID UGOCHUKWU</h1>
+        </div>
+
+        <div class="inner-container ">
+            <div class="breif-intro">
+
+                <div>
+                    <p data-aos="fade-up">Hi. I am Ugo and i'm a</p>
+                    <h2 data-aos="fade-up">Web Developer,</h2>
+                    <p data-aos="fade-up" class="mini-about">
+                        a fulltime tech enthusiast and learner,  
+                    I have got knowlege on JAVASCRIPT, HTML, CSS, and i am learning  libraries like: Laravel, Bootstrap e.t.c 
+                    </p>
+
+                    <a href="#about-me"> <button  data-aos="flip-up" data-aos-delay="800" class="read-more">Read More</button></a>
+                </div>
+            </div>
+
+            <div id="about-me">
+                <h1 data-aos="fade-right" data-aos-delay="1200">About Me -</h1>
+                <div class="image dp"> 
+                    <img data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="1000" src="images/me.jpg"/>
+                </div>
+
+                <p>
+                    <b data-aos="fade-up" data-aos-delay="1000">I am a Web Designer and Developer,</b>
+                   <span data-aos="fade-up" data-aos-duration="1000">
+                    as mentioned above. I build Responsive, User interactive, purpose Oriented and highly optimized websites with the use of
+                    JAVASCRIPT, HTML, CSS and a plethora of Frameworks and libraries which includes:</span>
+                    <span data-aos="fade-up" data-aos-duration="1000"> Laravel, Bootstrap e.t.c <br>
+                    I have always been enthusiastic and inquisitive about tech and computers generally, I'm a big fan of 
+                    building and creating things, putting ideas and imaginations into reality.</span>
+                    <br><span data-aos="fade-up" data-aos-duration="1000">
+                        I currently work remotely and opened to new opportunities,I'm also opened for collaborations with other developers.
+                        </span>
+                    <br><span data-aos="fade-up" data-aos-duration="1000">
+                        I have got the ability to manage time and get things done prior to a given deadline and given that there are no 
+                        external factors delaying the progress.<br></span>
+                    <span data-aos="fade-up" data-aos-duration="1000">  Since the first day i wrote a code, i've always had the mindset 
+                        of changing the world and making a great impact in the tech world,
+                            and i'm ready to give all it takes to make that dream become reality as i continue to learn and improve myself.</span>
+                </p><br/>
+                <div class="btn">
+                    <a href="files\ugo's resume.pdf"><button
+                        data-aos="zoom-in" data-aos-delay="500" data-aos-duration="600" class="download-cv">Download Cv</button></a>
+                    <a href="#contact"><button
+                        data-aos="zoom-in" data-aos-delay="800" data-aos-duration="600" class="hire-me">Hire Me</button></a>
+                </div>
+            </div>
+            <div class="row" id="services">
+                <h1 data-aos="fade-right">Services -</h1>
+
+                <div data-aos="fade-left" data-aos-duration="600" class="item">
+                    <div class="icon fas fa-edit"></div>
+                    <h2>Designing</h2>
+                    <p>
+                        Simple content structure, clean design patterns, and thoughtful interactions must be implimented.
+                        I also believe a 'user focused design' should be the primary goal of any website.
+                    </p>
+                </div>
+
+                <div data-aos="fade-left" data-aos-duration="600" class="item">
+                    <div class="icon fas fa-desktop"></div>
+                    <h2>Development</h2>
+                    <p>
+                        A responsive website (a Website that work across all devices), a fast and purpose Oriented website,
+                         with optimal user experience should be the focus of every developer and Designer.
+                    </p>
+                </div>
+
+                <div data-aos="fade-left" data-aos-delay="300" data-aos-duration="600" class="item">
+                    <div class="icon  fas fa-cog"></div>
+                    <h2>Maintenance</h2>
+                    <p>
+                        Getting your website up to date with 
+                        the latest content, designs and security measures, Brings the maximum lifetime value to your business investment.
+                    </p>
+                </div>
+
+            </div>
+        
+            <div id="my-skills">
+                <h1 data-aos="fade-right">My Skills -</h1>
+
+                <div class="item">
+                    <b data-aos="fade-right" data-aos-delay="200">Responsive Design </b>
+                    <div data-aos="flip-right" data-aos-delay="300" data-aos-duration="500" class="meter-responsive"></div>
+                </div>
+
+                <div class="item">
+                    <b data-aos="fade-right" data-aos-delay="400">Web Designing </b>
+                    <div data-aos="flip-right" data-aos-delay="500" data-aos-duration="500" class="meter-web-design"></div>
+                </div>
+
+                <div class="item">
+                    <b data-aos="fade-right" data-aos-delay="600">Back-End and Data Management </b>
+                    <div data-aos="flip-right" data-aos-delay="700" data-aos-duration="500" class="meter-backend"></div>
+                </div>
+
+                <div class="archivement">
+                    <div data-aos="zoom-in" class="item">
+                        <i class="fas fa-project-diagram"></i>
+                        <h2>15+</h2>
+                        <p>Projects</p>
+                    </div>
+
+                    <div data-aos="zoom-in" data-aos-delay="300" class="item">
+                        <i class="fas fa-users"></i>
+                        <h2>05+</h2>
+                        <p>Collaborations</p>
+                    </div>
+
+                </div>
+            </div>
+            
+            <div id="projects">
+                <p class="text" data-aos="fade-up" >
+                    Here is a couple of projects i've worked on:
+                </p>
+                <div data-aos="zoom-in" v-for="(link,key) of projects" class="item">
+                    <a :href="link">
+
+                        <p>{{key}}</p>
+                        <img :src="'images/'+key+'.png'" :alt="link" class="image"/>
+                    </a>
+                </div>
+                
+            </div>
+        
+            <div class="education">
+                <h1 data-aos="fade-right" >Education -</h1>
+                
+                <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000" >
+                    I am currently at 'ODUDUWA UNIVERSITY NIGERIA' studing Computer Science for 
+                    my Bachelor's degree (2018-2022).
+                    I am a self taught developer, who learns and grasps new things quite fast. 
+                    The following resorces helped me alot on my Web Development journey:
+                    <a href="w3schools.com">w3Schools</a>, <a href="sololearn.com">SoloLearn</a>, <a href="google.com">Google</a>,
+                    <a href="stackoverflow.com">Stack Overflow</a>, <a href="freecodecamp.org">freeCodeCamp</a>
+                    E.T.C.<br/>
+                    I'm learning more about Web Development and also learning about new technologies (programming 
+                    languages, frameworks E.T.C) to broaden my developer horizon.
+                    <br>
+                </p>
+            </div>
+
+            <div id="contact">
+                <!-- <div class="sent-msg">
+                    *Message sent, I'll get back to you as soon as possible.
+                    <div type="button" class="msg-sent-ok">Ok</div>
+                </div> -->
+                <div class="leave-a-message">
+                    <h1 data-aos="fade-right">Leave A Message -</h1>
+                    <form action="" @submit.prevent="sendForm"
+                    id="vis-form" method="post">
+    
+                        <div class="name">
+                            <label data-aos="fade-down" data-aos-delay="300" for="name">Name *</label>
+                            <input data-aos="zoom-in" data-aos-delay="500" type="text" name="name" 
+                            placeholder="Enter Your Name" v-model="form.name" required />
+                        </div>
+    
+                        <div class="email">
+                            <label data-aos="fade-down" data-aos-delay="700" for="Email">Email *</label>
+                            <input data-aos="zoom-in" data-aos-delay="1000" type="email" name="email"
+                             placeholder="Enter Your Email ID." v-model="form.email" required />
+                        </div>
+                        <div class="msg">
+                            <label data-aos="fade-down" data-aos-delay="1200" for="msg">How can i help you? *</label>
+                            <textarea data-aos="zoom-in" data-aos-delay="1500" name="message" id="msg" cols="30" rows="10"
+                             placeholder="Enter Your Message" v-model="form.message" required ></textarea>
+                        </div>
+                        <div class="btn">
+                            <button data-aos="flip-right" @submit.prevent="sendForm" type="submit">Send <i :class="flyPlane" class="fas fa-paper-plane"></i> </button>
+                        </div>
+                    </form>
+                    <div class="social">
+                        <a href="mailto:dugochukwu45@gmail.com?" class="item">        
+                            <i class="fas
+                             fa-envelope"></i>
+                        </a>
+            
+                        <a v-for="(link,key) of socials" :href="link" class="item">
+                            
+                            <i :class="'fab'+' '+'fa-'+key"></i>
+                        </a>
+                       
+                    </div>
+                </div>
+        </div>
+
+
+        </div>
+    </div>
+
+    <footer>
+        &#169; 2020 David Ugochukwu .All rights reserved.
+        <a href="#up"><i class="go-up fas fa-chevron-circle-up"></i>
+        </a>
+    </footer>
+
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("user_nmWuFOA31mAJzjdEj9MJG");
+        })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
